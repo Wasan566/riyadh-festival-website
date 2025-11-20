@@ -1,14 +1,27 @@
-// Display current date
-document.addEventListener("DOMContentLoaded", () => {
-    let d = new Date();
-    let dateElement = document.getElementById("currentDate");
+// ===============================
+// 1. Display Current Date on Home Page
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dateElement = document.getElementById("current-date");
     if (dateElement) {
-        dateElement.innerHTML = d.toDateString();
+        const today = new Date().toDateString();
+        dateElement.textContent = "Today’s Date: " + today;
     }
 });
 
-// Show thank you message
-function showThanks(event) {
-    event.preventDefault();
-    document.getElementById("thanksMsg").style.display = "block";
-}
+// ===============================
+// 2. Show Thank-You Message After Form Submission
+// ===============================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("ticketForm");
+
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // stops page refresh
+            alert("Thank you! Your ticket form has been submitted successfully.");
+            form.reset(); // clears the form
+        });
+    }
+});
