@@ -23,23 +23,23 @@
 </nav>
 
 <section>
-    <form onsubmit="showThanks(event)">
-        <label>Name:</label>
+    <form id="ticketForm">
+        <label>Name:</label><br>
         <input type="text" required><br>
 
-        <label>Email:</label>
+        <label>Email:</label><br>
         <input type="email" required><br>
 
-        <label>Number of Tickets:</label>
+        <label>Number of Tickets:</label><br>
         <input type="number" required><br>
 
-        <label>Phone:</label>
+        <label>Phone:</label><br>
         <input type="text" required><br>
 
         <button type="submit">Submit</button>
     </form>
 
-    <p id="thanksMsg" style="display:none; color:green; font-weight:bold;">
+    <p id="thankMsg" style="display:none; color:green; font-weight:bold; margin-top:10px;">
         Thank you! Your booking has been received.
     </p>
 </section>
@@ -47,4 +47,5 @@
 </body>
 
 </html>
+
 
